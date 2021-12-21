@@ -13,18 +13,19 @@ public class Printers {
             for (int column = 0; column < columns; column++) {
                 Cell cell = board.getCell(row, column);
                 if (cell.isLive())
-                    System.out.print("  ");
+                    System.out.print("+");
                 else
-                    System.out.print("██");
+                    System.out.print("-");
 
             }
             System.out.println();
         }
     }
 
-    public static void cleanLines(int lines) {
-        for (int line = 0; line < lines; line++) {
-            System.out.print("\r\b");
+    public static void printBorder(int cols) {
+        for (int col = 0; col < cols; col++) {
+            System.out.print("*");
         }
+        System.out.println();
     }
 }

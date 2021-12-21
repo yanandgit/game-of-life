@@ -10,7 +10,7 @@ import tech.qianmi.coderetreat.model.IBoard;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class RefresherTest {
+class RefresherTest {
     
     private static final Cell LIVE_CENTER = Cell.ofLive(1, 1);
 

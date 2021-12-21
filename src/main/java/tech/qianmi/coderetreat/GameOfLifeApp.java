@@ -20,18 +20,23 @@ public class GameOfLifeApp {
 		board.setCell(Cell.ofLive(17, 30));
 
 		Printers.printBoard(board);
-		TimeUnit.SECONDS.sleep(2);
-		Printers.cleanLines(board.getRows());
+		TimeUnit.MILLISECONDS.sleep(200);
+		Printers.printBorder(board.getColumns());
 
 		IRefresher refresher = new Refresher();
 
+		int count = 0;
 		while (true) {
+			if (count == 55)
+				return;
+
 			board = refresher.refresh(board);
 			Printers.printBoard(board);
-			TimeUnit.SECONDS.sleep(2);
-			Printers.cleanLines(board.getRows());
-		}
+			TimeUnit.MILLISECONDS.sleep(200);
+			Printers.printBorder(board.getColumns());
 
+			++count;
+		}
 	}
 
 }

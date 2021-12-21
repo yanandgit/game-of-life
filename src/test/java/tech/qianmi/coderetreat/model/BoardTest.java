@@ -15,7 +15,7 @@ class BoardTest {
     private IBoard board;
 
     @BeforeEach
-    public void setUp() {
+    void setUp() {
         board = new Board(3, 3);
     }
 
